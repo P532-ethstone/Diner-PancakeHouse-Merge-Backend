@@ -1,8 +1,6 @@
 package edu.iu.habahram.DinerPancakeHouseMerge.repository;
 
-import edu.iu.habahram.DinerPancakeHouseMerge.model.DinerMenuIterator;
-import edu.iu.habahram.DinerPancakeHouseMerge.model.MenuItem;
-import edu.iu.habahram.DinerPancakeHouseMerge.model.PancakeHouseIterator;
+import edu.iu.habahram.DinerPancakeHouseMerge.model.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
