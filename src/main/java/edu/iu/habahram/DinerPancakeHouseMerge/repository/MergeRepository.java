@@ -7,11 +7,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 @Repository
 public class MergeRepository {
-    public List<MenuItem> get(DinerMenuIterator dinerMenu, PancakeHouseIterator pancakeHouseMenu){
+    public List<MenuItem> get(Iterator<MenuItem> dinerMenu, Iterator<MenuItem> pancakeHouseMenu, Iterator<MenuItem> cafeMenu){
         ArrayList<MenuItem> fullMenu = new ArrayList<>();
 
         while(dinerMenu.hasNext()){
@@ -20,6 +21,10 @@ public class MergeRepository {
 
         while(pancakeHouseMenu.hasNext()){
             fullMenu.add(pancakeHouseMenu.next());
+        }
+
+        while(cafeMenu.hasNext()){
+            fullMenu.add(cafeMenu.next());
         }
 
         //sort the list by name

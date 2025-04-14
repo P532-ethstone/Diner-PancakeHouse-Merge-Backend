@@ -2,7 +2,7 @@ package edu.iu.habahram.DinerPancakeHouseMerge.model;
 
 import java.util.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
@@ -52,7 +52,7 @@ public class DinerMenu {
 
       // other menu methods here
 
-    public static Iterator createIterator(){
-        return new DinerMenuIterator(menuItems);
+    public Iterator createIterator(){
+        return new DinerMenuIterator(getMenuItems());
     }
 }
