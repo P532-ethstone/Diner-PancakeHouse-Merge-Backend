@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -42,6 +43,8 @@ public class MergeController {
                 items.add(item);
             }
         }
+
+        items.sort(Comparator.comparing(MenuItem::getName));
         return items;
     }
 }
