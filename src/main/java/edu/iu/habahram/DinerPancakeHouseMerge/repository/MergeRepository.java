@@ -29,4 +29,12 @@ public class MergeRepository {
         fullMenu.sort(Comparator.comparing(MenuItem::getName));
         return fullMenu;
     }
+
+    public ArrayList<Menu> getTheMenus() {
+        ArrayList<Menu> menus = new ArrayList<>();
+        menus.add(new DinerMenu());
+        menus.add(new PancakeHouseMenu());
+        menus.add(new CafeMenu());
+        return menus;
+    }
 }
