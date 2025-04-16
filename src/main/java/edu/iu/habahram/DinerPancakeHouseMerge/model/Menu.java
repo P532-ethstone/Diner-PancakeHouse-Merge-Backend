@@ -38,8 +38,10 @@ public class Menu extends MenuComponent{
 
     public MenuItem[] getItems() {
         ArrayList<MenuItem> res = new ArrayList<>();
-        for(MenuComponent m: menuComponents){
-            Collections.addAll(res, m.getItems());
+        Iterator<MenuComponent> iterator = menuComponents.iterator();
+        while(iterator.hasNext()){
+            MenuComponent menuComponent = iterator.next();
+            Collections.addAll(res, menuComponent.getItems());
         }
         return res.toArray(new MenuItem[res.size()]);
     }
